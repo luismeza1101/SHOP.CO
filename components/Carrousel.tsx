@@ -75,10 +75,10 @@ const Images: React.FC<PropsImage> = ({array, itemProduct}) => {
             className="w-[60%] shrink-0"
           >
             <Product
+              id={arrival.id}
               image={arrival.image}
               name={arrival.name}
               price={arrival.price}
-              stars={arrival.stars}
               discount={arrival.discount}
               initial_price={arrival.initial_price}
             />
