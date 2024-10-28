@@ -37,6 +37,7 @@ const ElementCartShop: React.FC<Props> = ({
   const deleteProduct = () => {
     const newListProducts = listProducts.filter(pro => pro.id != product.id)
     setListProducts(newListProducts)
+    localStorage.setItem('cart', JSON.stringify(newListProducts))
   }
 
   useEffect(() => {
