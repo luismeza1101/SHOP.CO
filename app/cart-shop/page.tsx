@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import ElementCartShop from "@components/ElementCartShop";
 import { Type_Product_Cart } from "../../types";
 import { codes_discounts } from "@data/discounts";
@@ -13,12 +13,9 @@ const PageCart = () => {
   const [listProducts, setListProducts] = useState<Type_Product_Cart[]>([])
   const refCodeDiscount = useRef<HTMLInputElement | null>(null)
 
-  const calcSubTotal = () => {
-    const resultSubTotal = listProducts.reduce((acc, product) => {
-      return acc + product.price * product.cant_product
-    },0)
-    return resultSubTotal
-  }
+  const calcSubTotal = useCallback(() => {
+    return listProducts.reduce((acc, product) => acc + product.price * product.cant_product, 0);
+  }, [listProducts]);
 
   const validateDiscount = () => {
     if(codes_discounts.includes(refCodeDiscount.current!.value)){
@@ -40,7 +37,7 @@ const PageCart = () => {
       setTotal(newTotal)
     }
     calculatePay()
-  },[listProducts, discount, PRICE_DELIVERY, calcSubTotal])
+  },[listProducts, discount, PRICE_DELIVERY])
 
 
   return (

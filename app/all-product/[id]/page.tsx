@@ -1,13 +1,14 @@
-
-
 import InfoProduct from "@components/InfoProduct";
 import { also_like } from "@data/also_like";
 import Reviews from "@components/Reviews";
 import ProductsHero from "@components/ProductsSlider";
 
+interface Props {
+  params: {id: string}
+}
 
-const PageInfoProduct = async ({ params }: { params: { id: string } }) => {
-  const {id} = await params
+const PageInfoProduct = async ({ params }: Props) => {
+  const {id} = params
   return (
     <>
       <main className="mt-10">
