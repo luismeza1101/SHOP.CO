@@ -6,7 +6,7 @@ import Reviews from "@components/Reviews";
 import ProductsHero from "@components/ProductsSlider";
 
 
-const ProductPage = async ({ params }: { params: { id: string } }) => {
+const PageInfoProduct = async ({ params }: { params: { id: string } }) => {
   const {id} = await params
   return (
     <>
@@ -25,4 +25,4 @@ const ProductPage = async ({ params }: { params: { id: string } }) => {
   );
 };
 
-export default ProductPage;
+export default PageInfoProduct;

@@ -6,7 +6,7 @@ import { all_products } from "@data/all_products";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 
-const page = () => {
+const PageProducts = () => {
   const [showFilter, setShowFilter] = useState(false);
 
   const handleShowFilter = () => {
@@ -155,4 +155,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default PageProducts;

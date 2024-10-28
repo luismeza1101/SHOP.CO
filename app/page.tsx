@@ -4,7 +4,7 @@ import Hero from "@components/Hero";
 import Sellings from "@components/Sellings";
 import Styles from "@components/Styles";
 
-export default function Home() {
+export default function PageMain() {
   return (
     <>
       <Hero/>

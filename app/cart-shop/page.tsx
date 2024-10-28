@@ -5,7 +5,7 @@ import ElementCartShop from "@components/ElementCartShop";
 import { Type_Product_Cart } from "../../types";
 import { codes_discounts } from "@data/discounts";
 
-const page = () => {
+const PageCart = () => {
   const [subTotal, setSubTotal] = useState(0);
   const [discount, setDiscount] = useState(0);
   const PRICE_DELIVERY = 12;
@@ -102,4 +102,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default PageCart;
