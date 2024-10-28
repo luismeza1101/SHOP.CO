@@ -1,18 +1,20 @@
+'use client'
+
 import InfoProduct from "@components/InfoProduct";
 import { also_like } from "@data/also_like";
 import Reviews from "@components/Reviews";
 import ProductsHero from "@components/ProductsSlider";
+import { useParams } from "next/navigation";
 
-interface Props {
-  params: {id: string}
-}
 
-const PageInfoProduct = async ({ params }: Props) => {
-  const {id} = params
+const PageInfoProduct =  () => {
+  const {id} = useParams()
   return (
     <>
       <main className="mt-10">
-        <InfoProduct product_id={id} />
+        {typeof id === 'string' && (
+          <InfoProduct product_id={id} />
+        )}
       </main>
       <Reviews />
       <section className="w-[90%] mx-auto text-center my-10">
