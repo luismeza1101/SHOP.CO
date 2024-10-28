@@ -1,0 +1,1 @@
+export const codes_discounts = ['110106', '20060111']

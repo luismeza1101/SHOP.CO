@@ -2,20 +2,46 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+.section-footer{
+    @apply font-medium tracking-[5px]
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.list-footer{
+    @apply flex flex-col items-start gap-2 mt-3 opacity-60 
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.item-list-footer{
+    @apply cursor-pointer hover:underline
+}
+
+.text-ligth{
+    @apply opacity-60
+}
+
+.button-main{
+    @apply bg-black text-white rounded-full hover:bg-gray-950
+}
+
+.subtitle{
+    @apply font-extrabold text-4xl
+}
+
+.style-card{
+    @apply bg-white rounded-2xl min-h-[190px] relative max-h-[289px] overflow-hidden
+}
+
+.discount{
+    @apply bg-[#ff3333] bg-opacity-10 py-1 px-2 rounded-full text-red-600
+}
+
+.initial-price{
+    @apply text-2xl font-bold opacity-30 line-through
+}
+
+.options-product{
+    @apply text-ligth text-sm
+}
+
+.button-secondary{
+    @apply bg-gray-main rounded-full
 }
