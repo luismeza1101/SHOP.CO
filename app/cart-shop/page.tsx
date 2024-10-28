@@ -40,7 +40,7 @@ const PageCart = () => {
       setTotal(newTotal)
     }
     calculatePay()
-  },[listProducts, discount, PRICE_DELIVERY])
+  },[listProducts, discount, PRICE_DELIVERY, calcSubTotal])
 
 
   return (

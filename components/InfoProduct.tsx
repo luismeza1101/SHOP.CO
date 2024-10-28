@@ -26,7 +26,7 @@ const InfoProduct: React.FC<Props> = ({ product_id }) => {
       }
     };
     getInfoProduct();
-  }, []);
+  }, [product_id]);
 
   const addCantProduct = () => {
     if (cantProduct < 5) {

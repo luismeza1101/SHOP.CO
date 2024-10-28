@@ -12,9 +12,8 @@ const Customers = () => {
       <CarrouselWithArrow />
       <div className="hidden md:flex flex-wrap justify-center gap-4 mt-10">
         {our_customers.map((comment, index) => (
-          <div className="max-w-[400px]">
+          <div className="max-w-[400px]" key={index}>
             <Comment
-              key={index}
               comment={comment.comment}
               name={comment.name}
               stars={comment.stars}
